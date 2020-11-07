@@ -131,7 +131,7 @@ The optimized model was used on the test data with following results:
 If  the machine learning model were used, an average savings of 22.5% (approximately $1.19 million) could be achieved. Additionally, 80% of the patients who are at the end of life would be flagged after 24 hours of hospital admission. If this model was applied to all community hospitals within the US, a savings of nearly $6.2 billion per year could be achieved.
 <br>
 #### Next steps
-A reasonable next step would be to create a stacked ensemble model, which would allow for a stronger algorithm to predict mortality in ICU patients.
+A reasonable next step would be to create a stacked ensemble model, which would combine this model with another predictive model using other features from the dataset. This would allow for a stronger algorithm to predict mortality in ICU patients.
 <br>
 #### About
 This project was completed in November 2020 as my second capstone for Springboard Data Science Bootcamp. My other projects can be found at https://github.com/carashri.
