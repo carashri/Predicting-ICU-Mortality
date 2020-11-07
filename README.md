@@ -126,7 +126,6 @@ The optimized model was used on the test data with following results:
 ![9](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/9-performance%20metrics.png)
 <br>
 #### Interpretation of Results: Hospital Cost Savings
-<br>
 ![10](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/10-hospital%20savings.png)
 <br>
 If  the machine learning model were used, an average savings of 22.5% (approximately $1.19 million) could be achieved. Additionally, 80% of the patients who are at the end of life would be flagged after 24 hours of hospital admission. If this model was applied to all community hospitals within the US, a savings of nearly $6.2 billion per year could be achieved.
