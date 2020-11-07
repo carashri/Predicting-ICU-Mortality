@@ -99,7 +99,7 @@ Finally, GridSearch Cross-Validation was performed to help determine best parame
 
 ![7](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/7-gridsearch.png)
 
-##### The optimized model was used on the test data with following results:
+The optimized model was used on the test data with following results:
 
 <br><br>*Best Model - AUC/ROC (with test data)*
 ![7.5](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/7.5%20Best%20model%20AUC-ROC.png)
