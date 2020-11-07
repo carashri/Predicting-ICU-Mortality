@@ -1,7 +1,7 @@
 ### Predicting ICU Mortality Using Natural Language Processing
 
 #### Goal
-Using the MIMIC-III database, based on caregiver notes identify ICU patients who are at high risk of mortality within 24 hours of admission.
+Using natural language processing, based on caregiver notes identify ICU patients who are at high risk of mortality within 24 hours of admission.
 
 #### Methods Used
 *Natural Language Processing
