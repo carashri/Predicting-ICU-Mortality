@@ -81,7 +81,7 @@ This is a classification problem, since the target variable, mortality, is categ
 
 ![3](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/3-model%20comparison.png)
 
-Logistic Regression was chosen as best performing, with AUC-ROC of 0.982 (training) and 0.787 (validation), and less overfitting compared with Random Forest.
+Logistic Regression was chosen as best performing, with AUC-ROC of 0.978 (training) and 0.781 (validation), and less overfitting compared with Random Forest.
 
 In order to better assess the performance of the linear regression model and to optimize its parameters, some parameters were visualized:
 <br>
