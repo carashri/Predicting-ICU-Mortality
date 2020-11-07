@@ -59,3 +59,67 @@ Mortality information, caregiver note text, admission date and time, time of dea
 
 #### Handling of imbalanced data
 Training data samples with negative mortality (i.e., survivors) were subsampled, so that the final training dataset would be equally balanced.
+
+![1](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/1%20-%20subsample%20negatives.png)
+
+#### Text Preprocessing
+
+Bag of Words - Steps
+<br>
+1. Numbers, punctuation, and irrelevant characters were removed from text.
+2. A pre-made list of stop words was used to remove irrelevant words (such as “a”, “the” “and”). 
+3. Most frequent words were noted. Additional stop words were added to the list (see next 2 figures).
+4. A vocabulary of ‘tokens’ was built from unique words left in the caregiver notes. 
+5. Each of the tokens was fed into a vectorizer, where it was converted into a feature (variable) that represented the different columns of the dataset. 
+
+![2](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/2-word%20frequency.png)
+
+#### Machine Learning
+
+*Model Selection*
+This is a classification problem, since the target variable, mortality, is categorical and binary.The ideal model would be a supervised learning model that works well with a large, sparse matrix dataset. The data was fed into four different models: logistic regression, Naive Bayes, random forest and SVM. 
+
+![3](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/3-model%20comparison.png)
+
+Logistic Regression was chosen as best performing, with AUC-ROC of 0.982 (training) and 0.787 (validation), and less overfitting compared with Random Forest.
+
+In order to better assess the performance of the linear regression model and to optimize its parameters, some parameters were visualized:
+
+*Sample Size*
+![4](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/4-sample%20size.png)
+
+*Number of Features*
+![5](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/5-number%20of%20features.png)
+
+*Regularization Strength*
+![6](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/6-regularization%20strength.png)
+
+*Gridsearch Cross-Validation*
+Finally, GridSearch Cross-Validation was performed to help determine best parameters. GridSearchCV determined the best performance parameters to be: 'C': 0.0001, 'max_iter': 100, 'penalty': 'l2', 'solver': 'sag'.
+
+![7](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/7-gridsearch.png)
+
+##### The optimized model was used on the test data with following results:
+
+*Best Model - AUC/ROC (with test data)*
+![7.5](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/7.5%20Best%20model%20AUC-ROC.png)
+
+*Confusion Matrix*
+![8](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/8-confusion%20matrix.png)
+
+*Performance Metrics*
+![9](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/9-performance%20metrics.png)
+
+#### Interpretation of Results: Hospital Cost Savings
+
+![10](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/10-hospital%20savings.png)
+
+If  the machine learning model were used, an average savings of 22.5% (approximately $1.19 million) could be achieved. Additionally, 80% of the patients who are at the end of life would be flagged after 24 hours of hospital admission. If this model was applied to all community hospitals within the US, a savings of nearly $6.2 billion per year could be achieved.
+
+#### Next steps
+A reasonable next step would be to create a stacked ensemble model, which would allow for a stronger algorithm to predict mortality in ICU patients.
+
+#### About
+This project was completed in November 2020 as my second capstone for Springboard Data Science Bootcamp. My other projects can be found at https://github.com/carashri.
+
+
