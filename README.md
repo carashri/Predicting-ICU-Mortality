@@ -95,7 +95,6 @@ In order to better assess the performance of the linear regression model and to 
 *Number of Features*
 <br>
 ![5](https://github.com/carashri/Predicting-ICU-Mortality/blob/main/Images/5-number%20of%20features.png)
-
 <br>
 <br>
 *Regularization Strength*
